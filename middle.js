@@ -1,12 +1,25 @@
 // TEST/ASSERTION FUNCTIONS
 
-const assertEqual = function(actual, expected) {
+// Takes in two arrays and returns VALUE of true/false based on match
+const eqArrays = (arr1, arr2) => {
+  value = true;
+  for (i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      value = false;
+    }
+  }
+  return value;
+};
+
+// Displays appropriate MESSAGE if actual is equal to expected
+const assertArraysEqual = (actual, expected) => {
   return actual === expected ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
 };
 
 
 
 // ACTUAL FUNCTION
+// Takes array and returns VALUE of middle-most element of array
 const middle = arr => {
   value = [];
   const midIndex = Math.floor(arr.length/2);
@@ -17,7 +30,7 @@ const middle = arr => {
     value.push(arr[midIndex]);
     }
   } 
-  console.log(value);
+  return value;
 }
 
 // TEST CODE
@@ -31,9 +44,7 @@ middle([1, 2, 3, 4, 5]) // => [3]
 middle([1, 2, 3, 4]) // => [2, 3]
 middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
 
+assertArraysEqual(eqArrays(middle([1, 2, 3, 4]), [2, 3]), true);
+assertArraysEqual(eqArrays(middle([1, 2, 3, 4, 5, 6]), [3, 4]), true);
 
-// distinguish if arr only has 1 or 2 objects, return empty arr
 
-/* const noSpaces = str.toLowerCase().split(" ").join(""); // removes spaces in the string
-const midIndex = Math.floor(noSpaces.length/2); //calculates mid of str's length
-const lastIndex = noSpaces.length - 1;  */
