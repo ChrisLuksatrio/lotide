@@ -3,6 +3,7 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = (arr1, arr2) => {
+  if (arr1.length === arr2.length) {
   value = true;
   for (i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
@@ -10,6 +11,7 @@ const eqArrays = (arr1, arr2) => {
     }
   }
   return value;
+  }
 };
 
 

@@ -2,6 +2,7 @@
 
 // Takes in two arrays and returns VALUE of true/false based on match
 const eqArrays = (arr1, arr2) => {
+  if (arr1.length === arr2.length) {
   value = true;
   for (i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
@@ -9,6 +10,7 @@ const eqArrays = (arr1, arr2) => {
     }
   }
   return value;
+  }
 };
 
 // Displays appropriate MESSAGE if actual is equal to expected
@@ -27,7 +29,7 @@ const middle = arr => {
     if (arr.length % 2 === 0) {
       value.push(arr[midIndex - 1], arr[midIndex]);
     } else {
-    value.push(arr[midIndex]);
+      value.push(arr[midIndex]);
     }
   } 
   return value;
