@@ -13,7 +13,7 @@ const eqArrays = (arr1, arr2) => {
 
 // Displays appropriate MESSAGE if actual is equal to expected
 const assertArraysEqual = (actual, expected) => {
-  return eqArrays = (actual, expected) === expected ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
+  return eqArrays(actual, expected) ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
 };
 
 // Actual Function
@@ -28,9 +28,11 @@ const letterPositions = sentence => {
       results[newStr[i]] = [i];
     }
   }
-  console.log(results)
+  return results
 };
 
-letterPositions("hello")
+
+
+assertArraysEqual(letterPositions('hello'), true)
 
 
