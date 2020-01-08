@@ -11,9 +11,9 @@ const eqArrays = (arr1, arr2) => {
 };
 
 const assertArraysEqual = (actual, expected) => {
-  return actual === expected ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
+  return eqArrays(actual, expected) ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
 };
 
 
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true) // => true
-assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1]), false) // => false
+assertArraysEqual([1, 2, 3], [1, 2, 3]) // => true
+assertArraysEqual([1, 2, 3], [3, 2, 1]) // => false
