@@ -13,7 +13,7 @@ const eqArrays = (arr1, arr2) => {
 
 // Displays appropriate MESSAGE if actual is equal to expected
 const assertArraysEqual = (actual, expected) => {
-  return actual === expected ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
+  return eqArrays(actual, expected) ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
 };
 
 // Actual Function - removes multiple objects within an array and RETURNS NEW ARRAY
@@ -29,9 +29,5 @@ const without = (source, itemsToRemove) => {
   return newarr;
 }
 
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
 
-
-const words = ["hello", "world", "lighthouse"];
-without(["hello", "world", "lighthouse"], ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);

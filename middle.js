@@ -15,7 +15,7 @@ const eqArrays = (arr1, arr2) => {
 
 // Displays appropriate MESSAGE if actual is equal to expected
 const assertArraysEqual = (actual, expected) => {
-  return actual === expected ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
+  return eqArrays(actual, expected) ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
 };
 
 
@@ -46,7 +46,7 @@ middle([1, 2, 3, 4, 5]) // => [3]
 middle([1, 2, 3, 4]) // => [2, 3]
 middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
 
-assertArraysEqual(eqArrays(middle([1, 2, 3, 4]), [2, 3]), true);
-assertArraysEqual(eqArrays(middle([1, 2, 3, 4, 5, 6]), [3, 4]), true);
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
 
 
