@@ -3,8 +3,8 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = str => {
-  let obj = {};
-  let strNew = str.replace(/\s/g, '').split('')
+  const obj = {};
+  const strNew = str.split('')
   for (i of strNew) {
     if (obj[i]) {
       obj[i] += 1
@@ -12,7 +12,8 @@ const countLetters = str => {
       obj[i] = 1
     }
   }
-  console.log(obj)
+  console.log(obj);
 }
 
-countLetters('lighthouse in the house')
+countLetters("LHL");
+
