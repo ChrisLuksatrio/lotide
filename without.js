@@ -1,20 +1,20 @@
-// Takes in two arrays and returns VALUE of true/false based on match
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length === arr2.length) {
-  value = true;
-  for (i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      value = false;
-    }
-  }
-  return value;
-  }
-};
+// // Takes in two arrays and returns VALUE of true/false based on match
+// const eqArrays = (arr1, arr2) => {
+//   if (arr1.length === arr2.length) {
+//   value = true;
+//   for (i = 0; i < arr1.length; i++) {
+//     if (arr1[i] !== arr2[i]) {
+//       value = false;
+//     }
+//   }
+//   return value;
+//   }
+// };
 
-// Displays appropriate MESSAGE if actual is equal to expected
-const assertArraysEqual = (actual, expected) => {
-  return eqArrays(actual, expected) ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
-};
+// // Displays appropriate MESSAGE if actual is equal to expected
+// const assertArraysEqual = (actual, expected) => {
+//   return eqArrays(actual, expected) ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
+// };
 
 // Actual Function - removes multiple objects within an array and RETURNS NEW ARRAY
 
@@ -29,5 +29,7 @@ const without = (source, itemsToRemove) => {
   return newarr;
 }
 
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+// assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+
+module.exports = without;
 

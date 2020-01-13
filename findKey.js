@@ -15,18 +15,19 @@ const findKey = (obj, callback) => {
       break
     }
   }
-  console.log(key);
+  return key;
 }
 
-findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2) // => "noma"
+// findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => x.stars === 2) // => "noma"
 
+module.exports = findKey;
 
 
 //when dealing with Objects, you need to convert the object into an array of keys to loop into it
