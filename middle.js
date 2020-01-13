@@ -1,25 +1,3 @@
-// TEST/ASSERTION FUNCTIONS
-
-// Takes in two arrays and returns VALUE of true/false based on match
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length === arr2.length) {
-  value = true;
-  for (i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      value = false;
-    }
-  }
-  return value;
-  }
-};
-
-// Displays appropriate MESSAGE if actual is equal to expected
-const assertArraysEqual = (actual, expected) => {
-  return eqArrays(actual, expected) ? console.log(`✅✅✅ Asserstion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Asserstion Failed: ${actual} !== ${expected}`);
-};
-
-
-
 // ACTUAL FUNCTION
 // Takes array and returns VALUE of middle-most element of array
 const middle = arr => {
@@ -35,18 +13,5 @@ const middle = arr => {
   return value;
 }
 
-// TEST CODE
-
-middle([1]) // => []
-middle([1, 2]) // => []
-
-middle([1, 2, 3]) // => [2]
-middle([1, 2, 3, 4, 5]) // => [3]
-
-middle([1, 2, 3, 4]) // => [2, 3]
-middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
-
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-
+module.exports = middle;
 
